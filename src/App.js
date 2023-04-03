@@ -4,11 +4,11 @@ import { Button, Container } from '@mui/material';
 
 import UnityLayout from './layouts/UnityLayout';
 
-import { flocking_ai } from './stubs/flocking'
+import { herd_sim } from './stubs/herd_sim'
 
 
 const App = () => {
-  const { requestFullscreen, ...game } = useUnityContext(flocking_ai);
+  const { requestFullscreen, ...game } = useUnityContext(herd_sim);
 
   function handleClickEnterFullscreen() {
     requestFullscreen(true);
