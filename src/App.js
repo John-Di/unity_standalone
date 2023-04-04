@@ -15,11 +15,13 @@ const App = () => {
     requestFullscreen(true);
   }
 
-  console.log('isLoaded', isLoaded);
-  console.log('loadingProgression', loadingProgression);
-
   return (
-    <Box sx={{ height: '100vh' }}>
+    <Box
+      position="fixed"
+      top={0}
+      left={0}
+      height="100vh"
+      width="100vw">
       <UnityLayout game={game} />
 
       <Container maxwidth="lg" sx={{
