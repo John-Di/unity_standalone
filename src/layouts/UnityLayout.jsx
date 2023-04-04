@@ -2,12 +2,12 @@ import React from 'react';
 import { Unity } from "react-unity-webgl";
 
 const UnityLayout = ({ game }) => {
-  const { unityProvider, isLoaded } = game;
+  const { unityProvider } = game;
 
   return <Unity
     unityProvider={unityProvider}
     style={{
-      visibility: isLoaded ? "visible" : "hidden",
+      visibility: "visible",
       width: "100%",
       height: "100%"
     }}
