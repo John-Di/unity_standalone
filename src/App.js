@@ -5,11 +5,12 @@ import { Button, CircularProgress, Container, Typography } from '@mui/material';
 
 import UnityLayout from './layouts/UnityLayout';
 
-import { herd_sim } from './stubs/herd_sim'
+import { herd_sim } from './stubs/herd_sim';
+import { rock_paper_scissors } from './stubs/rock_paper_scissors';
 
 
 const App = () => {
-  const { requestFullscreen, isLoaded, loadingProgression, ...game } = useUnityContext(herd_sim);
+  const { requestFullscreen, isLoaded, loadingProgression, ...game } = useUnityContext(rock_paper_scissors);
 
   function handleClickEnterFullscreen() {
     requestFullscreen(true);
