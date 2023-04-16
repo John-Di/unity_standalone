@@ -5,12 +5,15 @@ import { Button, CircularProgress, Container, Typography } from '@mui/material';
 
 import UnityLayout from './layouts/UnityLayout';
 
-import { herd_sim } from './stubs/herd_sim';
-import { rock_paper_scissors } from './stubs/rock_paper_scissors';
-
-
 const App = () => {
-  const { requestFullscreen, isLoaded, loadingProgression, ...game } = useUnityContext(rock_paper_scissors);
+  const gameName = process.env.REACT_APP_GAME;
+  const gameData = {
+    loaderUrl: `unity/${gameName}/Build/${gameName}.loader.js`,
+    dataUrl: `unity/${gameName}/Build/${gameName}.data`,
+    frameworkUrl: `unity/${gameName}/Build/${gameName}.framework.js`,
+    codeUrl: `unity/${gameName}/Build/${gameName}.wasm`,
+  };
+  const { requestFullscreen, isLoaded, loadingProgression, ...game } = useUnityContext(gameData);
 
   function handleClickEnterFullscreen() {
     requestFullscreen(true);
